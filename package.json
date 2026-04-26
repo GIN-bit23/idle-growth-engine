@@ -10,7 +10,9 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "setup:env": "bash ./scripts/setup-env.sh",
+    "setup:env:win": "powershell -ExecutionPolicy Bypass -File ./scripts/setup-env.ps1"
   },
   "dependencies": {
     "expo": "~53.0.9",
