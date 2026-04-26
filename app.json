@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Kush Idle Clicker",
+    "slug": "kush-idle-clicker",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": ["**/*"]
+  }
+}

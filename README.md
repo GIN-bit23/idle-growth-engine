@@ -1,187 +1,85 @@
 # 🌱 Kush Clicker Core
 
-A mobile-first idle/clicker game built with scalable systems, evolution-based progression, and modular architecture.
+A mobile-first idle/clicker game starter built with Expo + React Native + TypeScript.
 
-This project focuses on long-term retention through meaningful upgrades, tech tree decisions, and exponential growth mechanics.
-
----
-
-## 🚀 Overview
-
-Kush Clicker is not just a basic clicker game.
-
-It is designed as a **system-driven idle game engine** where:
-- progression is tied to **visual evolution**
-- upgrades create **real strategic decisions**
-- systems scale cleanly over time
+This repo includes a working **starter app** plus a full **VS Code setup** so you can open and start building quickly.
 
 ---
 
-## 🎯 Core Features
+## ✅ Included starter setup
 
-### 🌱 Core Gameplay Loop
-- Tap to generate currency
-- Passive income through generators
-- Real-time income scaling
+### Game starter
+- Tap button to earn kush currency
+- Passive income loop (ticks every 250ms)
+- 3 generator types (Plant, Farm, Lab)
+- Exponential generator cost scaling
+- Modular architecture (`config`, `core`, `systems`, `ui`)
 
-### ⚙️ Upgrade System
-- Multiple generator types (Plant, Farm, Lab, Dealer, Factory)
-- Exponential cost and production scaling
-- Immediate feedback on upgrades
-
-### 🌐 Tech Tree
-- 4 distinct branches:
-  - Growth (raw power)
-  - Efficiency (optimization)
-  - Mutation (risk/reward)
-  - Automation (idle scaling)
-- Limited upgrade points → meaningful choices
-
-### 🌿 Evolution System
-- 5 progression stages:
-  1. Organic
-  2. Enhanced
-  3. Mutated
-  4. Energy
-  5. Mythic
-- Each stage:
-  - increases production significantly
-  - unlocks new mechanics
-
-### ⚡ Feedback System
-- Click feedback (particles + numbers)
-- Upgrade feedback (visual + state change)
-- Evolution feedback (major visual shift)
+### VS Code starter
+- Recommended extensions (`ESLint`, `Prettier`, React Native tools)
+- Format-on-save and lint integration
+- VS Code tasks + launch configs
+- Prettier + EditorConfig + ESLint flat config
+- `.gitignore` defaults for Expo/Node
 
 ---
 
-## 🧠 Design Principles
+## 🧰 Environment setup (one command)
 
-- Systems over features
-- Clarity over complexity
-- Mobile-first UX
-- Scalable architecture
-- No meaningless upgrades
+### macOS / Linux
+```bash
+npm run setup:env
+```
 
----
+### Windows (PowerShell)
+```bash
+npm run setup:env:win
+```
 
-## 🏗️ Project Structure
+These setup scripts:
+1. Verify Node.js version (20+)
+2. Install npm dependencies
+3. Install recommended VS Code extensions (if `code` CLI is available)
+4. Print next steps
 
-
-/src
-/core → game loop, state management, economy
-/systems → upgrades, tech tree, evolution
-/ui → screens, components, layout
-/assets → images, icons, brand assets
-/config → balancing values and constants
-
-/brand_assets → UI and design references
-/claude.md → AI development rules
-
+Node version target is pinned in `.nvmrc`.
 
 ---
 
-## ⚙️ Economy Model
+## 📱 Run locally
 
-Core formulas:
+```bash
+npm run start
+```
 
-
-cost = base_cost * (1.15 ^ level)
-production = base_output * level * global_multiplier
-
-
-Rules:
-- exponential but controlled growth
-- visible impact per upgrade
-- no flat progression
+Then open with Expo Go (scan QR code on iOS/Android).
 
 ---
 
-## 📱 Mobile-First Design
+## 💻 Use with Visual Studio Code
 
-- Portrait orientation
-- Thumb-friendly interactions
-- Minimum 44px tap targets
-- High-contrast UI for long sessions
-
----
-
-## 🎨 UI & Design System
-
-Defined in:
-- `brand_assets/GUIDELINES.png`
-
-Includes:
-- color system
-- typography
-- icon rules
-- component behavior
+1. Open this folder in VS Code.
+2. Install recommended extensions when prompted.
+3. Run `Terminal → Run Task...` and choose:
+   - `Setup environment`
+   - `Start Expo`
+4. Use launch configurations from `Run and Debug` for Android/iOS.
 
 ---
 
-## 🤖 AI Development
+## 🧪 Useful scripts
 
-This project uses `claude.md` to enforce:
-- clean architecture
-- consistent UI behavior
-- correct economy scaling
-- modular code structure
-
----
-
-## 🚧 Current Status
-
-- [ ] Core loop
-- [ ] Generator system
-- [ ] Upgrades interface
-- [ ] Tech tree system
-- [ ] Evolution system
-- [ ] Prestige system
-
----
-
-## 🧪 Future Systems
-
-- Offline progress
-- Achievements
-- Events
-- Meta progression
-- Monetization layer
-
----
-
-## ⚠️ Development Rules
-
-Do NOT:
-- hardcode values
-- duplicate logic
-- add weak upgrades (<10% impact)
-- break scaling consistency
-
----
-
-## 🚀 Getting Started
-
-1. Clone the repository
-2. Install dependencies
-
-npm install
-
-3. Run development environment
-
-npm run dev
-
-
----
-
-## 📌 Notes
-
-This project is built as a **scalable idle game system**, not just a prototype.
-
-Every feature must:
-- support progression
-- improve retention
-- integrate with existing systems
+```bash
+npm run setup:env
+npm run setup:env:win
+npm run start
+npm run android
+npm run ios
+npm run web
+npm run typecheck
+npm run lint
+npm run format
+```
 
 ---
 
